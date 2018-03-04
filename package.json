@@ -1,0 +1,21 @@
+{
+  "name": "last-api",
+  "version": "1.0.0",
+  "description": "APIs for the LAST Chrome Extension",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harshit Jain <hj.harshit007@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.25",
+    "mongoose": "^5.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
