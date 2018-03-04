@@ -4,10 +4,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let UserSchema = new Schema({
-    email: { type: String, required: true },
+    email: { type: String, required: true, trim: true, unique: true },
     password: { type: String, required: true },
-    lastLoggedIn: { type: Date },
+    createdAt: { type: Date, default: Date.now() },
+    updatedAt: Date,
     tabs: [String]
+}, { collection: 'users' });
+
+UserSchema.virtual('username').get(() => {
+   return this.email.split("@")[0];
 });
 
 
